@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-    var topics = ["Wonder Woman", "Jean Grey", "Gamora","Spider-Woman","She-Hulk", "Silk", "Scarlet Witch", "Shuri", "Captain Marvel"];
+    var topics = ["Wonder Woman", "Jean Grey", "Gamora","Spider-Woman","She-Hulk", "Scarlet Witch", "Shuri", "Captain Marvel"];
 
     var button;
     var newTopic = "";
