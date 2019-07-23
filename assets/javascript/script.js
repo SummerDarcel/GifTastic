@@ -49,7 +49,7 @@ $(document).ready(function(){
                 topicDiv.append(topicImage);
                 // rating is appended to the div below the gif
                 topicDiv.append(p);
-                // new images will be placed at the beginning (top) of the containing gif area
+                //new images 
                 $("#gifArea").prepend(topicDiv);
             }
         })
