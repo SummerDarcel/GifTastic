@@ -5,18 +5,17 @@ $(document).ready(function(){
     var button;
     var newTopic = "";
     
-    // function to create new buttons from the topics array
+    // function to create new buttons from the topics 
     var buttonGenerator = function () {
         // the previous div elements are emptied 
         $("#buttonRow").empty();
         // loops through the array and creates buttons
         for (i = 0; i < topics.length; i++) {
-            button = $("<button type=" + "button" + ">" + topics[i] + "</button>").addClass("btn btn-warning").attr("data", topics[i]);
+            button = $("<button type=" + "button" + ">" + topics[i] + "</button>").addClass("btn btn-primary").attr("data", topics[i]);
             $("#buttonRow").append(button);
         };
     }
-    
-    // The user clicks on a generated orange button, which generates 10 static, non-animated gif images from the GIPHY API and places them on the page. 
+     
     $("#buttonRow").on("click", ".btn", function () {
         var x = $(this).attr("data");
         var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + x + "&api_key=ckGenMACE4Dr3cG09lAn2VXkWYWOE5qb&limit=10";
@@ -56,11 +55,11 @@ $(document).ready(function(){
         })
     })
     
-    // When the user clicks one of the still GIPHY images, and it animates. When the user clicks the gif again, it stops playing.
+    // Stop giffyTime Start giffyTime
     $("#gifArea").on("click", ".gif", function (event) {
         event.preventDefault();
     
-        // gets the current state of the clicked gif 
+        // state of clicked gif
         var state = $(this).attr("data-state");
     
         // according to the current state gifs toggle between animate and still 
@@ -71,7 +70,6 @@ $(document).ready(function(){
             $(this).attr("src", $(this).attr("data-still"));
             $(this).attr("data-state", "still");
         }
-    
     })
     
     $(".submit").on("click", function (event) {
